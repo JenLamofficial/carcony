@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Screenshots & dev artifacts
+temporary screenshots/
+capture.py
+serve.mjs
+screenshot.mjs
+/tmp/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
