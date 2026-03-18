@@ -577,6 +577,12 @@
       .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
     }
 
+    /* Hide Moovs floating widget button */
+    #moovs-widget-button,
+    [id^="moovs"],
+    [class^="moovs"],
+    iframe[src*="moovs"] { display: none !important; }
+
     /* reveal classes kept for JS hook; elements always visible */
     .reveal { opacity: 1; }
     @media (prefers-reduced-motion: no-preference) {
