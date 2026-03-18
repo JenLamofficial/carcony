@@ -139,38 +139,30 @@
       align-items: center; justify-content: center;
       text-align: center; padding: 0 24px;
     }
-    .hero-eyebrow {
-      display: flex; align-items: center; gap: 14px;
-      font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: .42em; color: var(--muted); text-transform: uppercase;
-      opacity: 0; animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) .3s forwards;
+    .hero-logo-wrap {
+      opacity: 0; animation: heroFadeUp 1.1s cubic-bezier(.22,1,.36,1) .4s forwards;
+      margin: 0;
     }
-    .hero-rule {
-      display: inline-block; width: 32px; height: 1px;
-      background: linear-gradient(to right, transparent, var(--muted));
+    .hero-logo-img {
+      width: clamp(260px, 42vw, 520px); height: auto;
+      mix-blend-mode: screen; border-radius: 4px;
     }
-    .hero-rule:last-child { background: linear-gradient(to left, transparent, var(--muted)); }
-    .hero-wordmark {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(64px, 12vw, 144px);
-      font-weight: 700; letter-spacing: .12em;
-      color: var(--gold); line-height: 1; margin: 20px 0 16px;
-      opacity: 0; animation: heroFadeUp 1.1s cubic-bezier(.22,1,.36,1) .6s forwards;
-      text-shadow: 0 0 80px rgba(201,168,76,.18);
-    }
-    .hero-sub {
-      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300;
-      letter-spacing: .08em; color: rgba(240,235,224,.55); max-width: 420px;
+    .hero-slogan {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(15px, 2.2vw, 22px);
+      font-style: italic; font-weight: 400;
+      color: var(--cream); line-height: 1.6;
+      margin-top: 24px; text-align: center;
       opacity: 0; animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) .9s forwards;
     }
     .hero-btns {
       display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
-      margin-top: 40px;
+      margin-top: 36px;
       opacity: 0; animation: heroFadeUp .9s cubic-bezier(.22,1,.36,1) 1.2s forwards;
     }
     @media (max-width: 768px) {
-      .hero-eyebrow { font-size: 8px; letter-spacing: .28em; }
-      .hero-rule { width: 20px; }
+      .hero-logo-img { width: clamp(200px, 80vw, 320px); }
+      .hero-slogan { font-size: 15px; }
     }
 
     /* ── HERO ── */
@@ -727,13 +719,10 @@
     <div aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(to bottom,transparent,#0C0C0C);z-index:2;pointer-events:none;"></div>
     <!-- Cinematic headline -->
     <div class="hero-headline-wrap">
-      <p class="hero-eyebrow">
-        <span class="hero-rule"></span>
-        Discreet Executive Transportation
-        <span class="hero-rule"></span>
-      </p>
-      <h1 class="hero-wordmark">CARCO NY</h1>
-      <p class="hero-sub">New York's standard for privacy, punctuality, and presence.</p>
+      <h1 class="hero-logo-wrap">
+        <img src="Brand_Assets/sample logo.jpg" alt="CARCO NY" class="hero-logo-img" />
+      </h1>
+      <p class="hero-slogan">"No surprises. No excuses.<br>Every ride handled with intention."</p>
       <div class="hero-btns">
         <a href="#cta" class="btn-primary">
           Reserve Now
