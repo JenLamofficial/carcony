@@ -1570,8 +1570,17 @@
         navInd.style.transition = '';
       });
 
+      // Lock scroll-spy for 1s after a manual click so indicator doesn't jump
+      var spyLocked = false;
+      var spyLockTimer = null;
+
       navTabs.forEach(function (tab) {
-        tab.addEventListener('click', function () { setNavActive(tab); });
+        tab.addEventListener('click', function () {
+          setNavActive(tab);
+          spyLocked = true;
+          clearTimeout(spyLockTimer);
+          spyLockTimer = setTimeout(function () { spyLocked = false; }, 1000);
+        });
       });
 
       // Scroll-spy via IntersectionObserver
@@ -1583,6 +1592,7 @@
       });
 
       var observer = new IntersectionObserver(function (entries) {
+        if (spyLocked) return;
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var id = entry.target.id;
