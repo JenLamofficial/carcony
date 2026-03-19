@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CARCO NY — Discreet Executive Transportation</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&family=Barlow:wght@300;400;500;600&family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;600;700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&family=Barlow:wght@300;400;500;600;700&family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;600;700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
       --black:   #0C0C0C;
@@ -18,6 +18,9 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    p, li, blockquote, .section-sub, .service-card p, .process-step p, .hero-sub {
+      font-family: 'Barlow', sans-serif; font-weight: 300;
+    }
     html { scroll-behavior: smooth; }
 
     /* Skip to main content */
@@ -36,6 +39,7 @@
 
     body {
       font-family: 'Barlow', sans-serif;
+      font-weight: 400;
       font-size: 16px;
       line-height: 1.7;
       background: var(--black);
@@ -52,7 +56,7 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
     }
 
-    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
 
     /* ── TOP UTILITY BAR ── */
     #top-bar {
@@ -97,7 +101,7 @@
     .nav-logo img { height: 38px; width: auto; border-radius: 3px; }
     .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
     .nav-logo-text span:first-child {
-      font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700;
+      font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700;
       letter-spacing: .08em; color: var(--gold);
     }
     .nav-logo-text span:last-child {
@@ -192,7 +196,7 @@
     .hero-stat:first-child { padding-left: 0; }
     .hero-stat:last-child { border-right: none; }
     .hero-stat-num {
-      font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700;
+      font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700;
       color: var(--gold); letter-spacing: -.02em; line-height: 1; margin-bottom: 6px;
     }
     .hero-stat-label { font-size: 10px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
@@ -205,7 +209,7 @@
     }
     #quote::before { content: none; }
     .quote-text {
-      font-family: 'Playfair Display', serif; font-size: clamp(22px, 3.2vw, 36px);
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.2vw, 36px);
       font-style: italic; font-weight: 400; color: var(--gold); letter-spacing: .01em;
       max-width: 640px; margin: 0 auto 24px; line-height: 1.9;
     }
@@ -218,14 +222,14 @@
       font-family: 'Barlow Condensed', sans-serif; font-style: normal; font-weight: 300;
       text-transform: uppercase; letter-spacing: .08em; color: var(--cream); font-size: clamp(16px, 2.2vw, 26px);
     }
-    .quote-attr { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+    .quote-attr { font-family: 'Barlow', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
 
     /* ── SECTION COMMON ── */
     section { position: relative; z-index: 1; }
     .section-pad { padding: 96px 48px; }
     .section-eyebrow {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: 10px; font-weight: 600; letter-spacing: .3em;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .3em;
       text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
     }
     .section-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
@@ -276,7 +280,7 @@
     .trust-points { margin-top: 40px; display: flex; flex-direction: column; gap: 28px; }
     .trust-item { display: flex; gap: 20px; align-items: flex-start; }
     .trust-num {
-      font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700;
+      font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 700;
       color: var(--gold); letter-spacing: .06em; line-height: 1; padding-top: 4px; min-width: 24px;
     }
     .trust-item h4 { font-size: 15px; font-weight: 600; letter-spacing: -.01em; color: var(--cream); margin-bottom: 4px; }
@@ -299,7 +303,7 @@
     }
     .fleet-body { padding: 28px 28px 32px; }
     .fleet-tag {
-      display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .28em;
+      display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .28em;
       text-transform: uppercase; color: var(--gold); border: 1px solid rgba(198,169,107,.3);
       padding: 4px 10px; border-radius: 2px; margin-bottom: 14px;
     }
@@ -307,7 +311,7 @@
     .fleet-body p { font-size: 13px; line-height: 1.7; color: rgba(240,235,224,.5); margin-bottom: 20px; }
     .fleet-specs { display: flex; gap: 20px; border-top: 1px solid var(--border); padding-top: 18px; }
     .fleet-spec { flex: 1; text-align: center; }
-    .fleet-spec-val { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--gold); }
+    .fleet-spec-val { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--gold); }
     .fleet-spec-label { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 2px; }
 
     /* ── PROCESS ── */
@@ -326,7 +330,7 @@
     .step-num {
       width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
       border: 1px solid var(--gold); border-radius: 50%; background: var(--black);
-      font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700;
+      font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700;
       color: var(--gold); letter-spacing: .08em; position: relative; z-index: 1; margin-bottom: 28px;
     }
     .process-step h4 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; color: var(--cream); margin-bottom: 10px; }
@@ -386,7 +390,7 @@
       text-transform: uppercase; color: rgba(240,235,224,.48);
       text-decoration: none; cursor: pointer; white-space: nowrap;
       transition: color .3s ease; display: flex; align-items: center; gap: 6px;
-      border: none; background: none; font-family: 'Inter', sans-serif;
+      border: none; background: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
     }
     .tl-tab:hover { color: rgba(240,235,224,.8); }
     .tl-tab.tl-active { color: var(--gold); }
@@ -432,7 +436,7 @@
       text-transform: uppercase; color: var(--gold);
     }
     .exec-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(26px, 3vw, 40px); font-weight: 700;
       line-height: 1.2; letter-spacing: -.02em; color: var(--cream);
     }
@@ -915,16 +919,16 @@
       <!-- subtle gold glow -->
       <div style="position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(198,169,107,.08) 0%,transparent 70%);pointer-events:none;"></div>
 
-      <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--cream);line-height:1.25;margin-bottom:16px;">Complimentary Executive Transfer<br><em style="font-style:italic;color:var(--gold);">By Invitation</em></h3>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--cream);line-height:1.25;margin-bottom:16px;">Complimentary Executive Transfer<br><em style="font-style:italic;color:var(--gold);">By Invitation</em></h3>
       <p style="color:var(--muted);line-height:1.7;margin-bottom:40px;">CARCO NY offers a limited number of complimentary executive transfer experiences to qualified corporate professionals, including executives, senior leadership, and decision-makers requiring consistent, discreet transportation for business travel, airport transfers, and corporate engagements.<br /><br />Access is granted by application only.</p>
 
       <div style="display:grid;gap:32px;">
 
         <!-- Step I -->
         <div style="display:flex;gap:24px;align-items:flex-start;">
-          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">I</div>
+          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">I</div>
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Request Access</h4>
+            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Request Access</h4>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:12px;">Complete the short form with the following:</p>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
               <li style="color:var(--muted);font-size:.875rem;display:flex;gap:10px;align-items:baseline;"><span style="color:var(--gold);font-size:.6rem;">&#9679;</span> Full Name</li>
@@ -938,9 +942,9 @@
 
         <!-- Step II -->
         <div style="display:flex;gap:24px;align-items:flex-start;">
-          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">II</div>
+          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">II</div>
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Application Review</h4>
+            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Application Review</h4>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:12px;">CARCO NY reviews each application to ensure the program is reserved for qualified executive clients. Approved applicants receive:</p>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
               <li style="color:var(--muted);font-size:.875rem;display:flex;gap:10px;align-items:baseline;"><span style="color:var(--gold);font-size:.6rem;">&#9679;</span> Ride confirmation</li>
@@ -952,9 +956,9 @@
 
         <!-- Step III -->
         <div style="display:flex;gap:24px;align-items:flex-start;">
-          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">III</div>
+          <div style="flex-shrink:0;width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--gold);letter-spacing:.05em;">III</div>
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Confirm Your Executive Transfer</h4>
+            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--cream);margin-bottom:10px;">Confirm Your Executive Transfer</h4>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:12px;">Once approved, applicants may schedule their complimentary executive ride experience, which includes:</p>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
               <li style="color:var(--muted);font-size:.875rem;display:flex;gap:10px;align-items:baseline;"><span style="color:var(--gold);font-size:.6rem;">&#9679;</span> Executive-class SUV service</li>
@@ -971,11 +975,11 @@
       <!-- Scheduling Guidelines + Disclosure -->
       <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--border);display:grid;gap:24px;">
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--cream);margin-bottom:8px;">Scheduling Guidelines</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--cream);margin-bottom:8px;">Scheduling Guidelines</h4>
           <p style="color:var(--muted);font-size:.875rem;line-height:1.7;">Applications must be submitted at least <strong style="color:var(--cream);">48–72 hours</strong> prior to the requested ride date to allow time for verification and scheduling.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:.95rem;color:var(--cream);margin-bottom:8px;">Program Terms</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--cream);margin-bottom:8px;">Program Terms</h4>
           <p style="color:var(--muted);font-size:.875rem;line-height:1.7;margin-bottom:10px;">Participation is subject to review and availability. Submission of an application does not guarantee approval.</p>
           <p style="color:var(--muted);font-size:.875rem;line-height:1.7;margin-bottom:10px;">CARCO NY reserves the right to approve or decline requests at its discretion.</p>
           <p style="color:var(--muted);font-size:.875rem;line-height:1.7;margin-bottom:10px;">A valid corporate email address is required for verification.</p>
@@ -1070,7 +1074,7 @@
 
       <!-- Section label + intro -->
       <div style="text-align:center;margin-bottom:48px;">
-        <p style="font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:520px;margin:0 auto;">Submit your request below. A CARCO NY coordinator will review your application and follow up within 24 hours with next steps.</p>
+        <p style="font-family:'Barlow',sans-serif;font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:520px;margin:0 auto;">Submit your request below. A CARCO NY coordinator will review your application and follow up within 24 hours with next steps.</p>
       </div>
 
       <!-- Form card -->
@@ -1123,7 +1127,7 @@
               <span id="reserve-btn-text">Submit Request</span>
               <span id="reserve-btn-spinner" style="display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:rf-spin 0.7s linear infinite;"></span>
             </button>
-            <p style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.6;">By submitting, you agree to our <a href="#" onclick="openModal('tc-modal');return false;" style="color:var(--gold);text-decoration:underline;cursor:pointer;">Terms &amp; Conditions</a>.</p>
+            <p style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.6;">By submitting, you agree to our <a href="#" onclick="openModal('tc-modal');return false;" style="color:var(--gold);text-decoration:underline;cursor:pointer;">Terms &amp; Conditions</a>.</p>
 
           </form>
         </div>
@@ -1136,13 +1140,13 @@
               <path id="rf-checkpath" d="M5 13l4 4L19 7" style="stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset 0.8s cubic-bezier(0.4,0,0.2,1) 0.1s;" />
             </svg>
           </div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--cream);margin-bottom:10px;">Request Received</h3>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.7;">We'll be in touch within the hour.<br />A CARCO NY coordinator will reach out to confirm your reservation.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--cream);margin-bottom:10px;">Request Received</h3>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.7;">We'll be in touch within the hour.<br />A CARCO NY coordinator will reach out to confirm your reservation.</p>
         </div>
       </div>
 
       <!-- Trust footnote -->
-      <p style="font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(122,122,122,0.55);text-align:center;margin-top:20px;letter-spacing:0.03em;">Your information is kept strictly confidential and used solely to coordinate your reservation.</p>
+      <p style="font-family:'Barlow',sans-serif;font-size:0.78rem;color:rgba(122,122,122,0.55);text-align:center;margin-top:20px;letter-spacing:0.03em;">Your information is kept strictly confidential and used solely to coordinate your reservation.</p>
 
     </div>
 
@@ -1155,7 +1159,7 @@
     }
     .rf-label {
       display:block;
-      font-family:'Inter',sans-serif;
+      font-family:'Barlow',sans-serif;
       font-size:0.75rem;
       font-weight:500;
       letter-spacing:0.08em;
@@ -1169,7 +1173,7 @@
       border:1px solid rgba(198,169,107,0.2);
       border-radius:8px;
       padding:10px 14px;
-      font-family:'Inter',sans-serif;
+      font-family:'Barlow',sans-serif;
       font-size:0.9rem;
       color:var(--cream);
       outline:none;
@@ -1224,33 +1228,33 @@
       <div style="display:flex;flex-direction:column;gap:0;">
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">How do I request service?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Submit your request via phone, email, or our online form. A coordinator will review your details and follow up with confirmation and next steps.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">How do I request service?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Submit your request via phone, email, or our online form. A coordinator will review your details and follow up with confirmation and next steps.</p>
         </div>
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">How is pricing structured?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Pricing is based on service type, vehicle selection, and level of coordination. Custom quotes are provided upon request.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">How is pricing structured?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Pricing is based on service type, vehicle selection, and level of coordination. Custom quotes are provided upon request.</p>
         </div>
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">What areas do you serve?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">CARCO NY provides service across New York City, Long Island, and major airports including JFK, LGA, and EWR. Additional locations may be accommodated upon request.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">What areas do you serve?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">CARCO NY provides service across New York City, Long Island, and major airports including JFK, LGA, and EWR. Additional locations may be accommodated upon request.</p>
         </div>
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">Do you offer airport service?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Yes. Airport services are coordinated based on your itinerary, with optional meet-and-greet arrangements confirmed in advance.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">Do you offer airport service?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Yes. Airport services are coordinated based on your itinerary, with optional meet-and-greet arrangements confirmed in advance.</p>
         </div>
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">Can service be customized?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Yes. Custom-tailored service configurations are available based on your schedule and requirements.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">Can service be customized?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">Yes. Custom-tailored service configurations are available based on your schedule and requirements.</p>
         </div>
 
         <div class="sd-item reveal" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;">
-          <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">What types of clients do you serve?</p>
-          <p style="font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">CARCO NY serves corporate executives, leadership teams, and VIP clients requiring discreet, reliable transportation.</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);margin-bottom:8px;">What types of clients do you serve?</p>
+          <p style="font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--muted);line-height:1.75;">CARCO NY serves corporate executives, leadership teams, and VIP clients requiring discreet, reliable transportation.</p>
         </div>
 
       </div>
@@ -1700,40 +1704,40 @@
   <div id="pp-modal" role="dialog" aria-modal="true" aria-labelledby="pp-title" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);padding:24px;">
     <div style="background:#141414;border:1px solid rgba(198,169,107,0.2);border-radius:4px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:40px 36px;position:relative;">
       <button aria-label="Close Privacy Policy" onclick="closeModal('pp-modal')" style="position:absolute;top:16px;right:20px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;line-height:1;">&times;</button>
-      <h3 id="pp-title" style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);margin-bottom:6px;">Privacy Policy</h3>
-      <p style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);margin-bottom:28px;letter-spacing:0.04em;">Effective as of 2025 · CARCO NY</p>
+      <h3 id="pp-title" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);margin-bottom:6px;">Privacy Policy</h3>
+      <p style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);margin-bottom:28px;letter-spacing:0.04em;">Effective as of 2025 · CARCO NY</p>
 
-      <div style="display:flex;flex-direction:column;gap:20px;font-family:'Inter',sans-serif;font-size:0.875rem;color:var(--muted);line-height:1.75;">
+      <div style="display:flex;flex-direction:column;gap:20px;font-family:'Barlow',sans-serif;font-size:0.875rem;color:var(--muted);line-height:1.75;">
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">1. Information We Collect</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">1. Information We Collect</h4>
           <p>When you submit a request or interact with our website, we may collect your name, email address, phone number, company name, executive title, and transportation details including pickup and drop-off locations, dates, and itinerary information.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">2. How We Use Your Information</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">2. How We Use Your Information</h4>
           <p>Information collected is used solely to coordinate and confirm transportation services, communicate booking details and follow-ups, and verify eligibility for the complimentary executive transfer program. We do not use your information for unsolicited outreach or marketing purposes.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">3. How We Protect Your Information</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">3. How We Protect Your Information</h4>
           <p>All client data is kept strictly confidential. Access is limited to authorized CARCO NY personnel only. Information is not retained beyond the period necessary to fulfill the requested service.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">4. What We Do Not Do</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">4. What We Do Not Do</h4>
           <p>CARCO NY does not sell, rent, or share your personal information with third-party marketers or data brokers. Your information will not be used for any purpose beyond coordinating your service, except where required by law.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">5. Third-Party Services</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">5. Third-Party Services</h4>
           <p>CARCO NY may use trusted third-party tools to facilitate communication and service coordination. Any such tools are selected for their commitment to data security and confidentiality. We do not authorize these parties to use your information for their own purposes.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">6. Your Rights</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">6. Your Rights</h4>
           <p>You have the right to request access to the personal information CARCO NY holds about you, and to request its correction or deletion. To exercise these rights, please contact us directly via phone or email.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">7. Cookies &amp; Website Data</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">7. Cookies &amp; Website Data</h4>
           <p>This website does not use tracking cookies or third-party analytics tools. Any data collected through form submissions is handled as described in this policy.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">8. Updates to This Policy</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">8. Updates to This Policy</h4>
           <p>CARCO NY reserves the right to update this Privacy Policy at any time. Any material changes will be reflected on this page. Continued use of our services following an update constitutes acceptance of the revised policy.</p>
         </div>
       </div>
@@ -1744,48 +1748,48 @@
   <div id="tc-modal" role="dialog" aria-modal="true" aria-labelledby="tc-title" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);padding:24px;">
     <div style="background:#141414;border:1px solid rgba(198,169,107,0.2);border-radius:4px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:40px 36px;position:relative;">
       <button aria-label="Close Terms and Conditions" onclick="closeModal('tc-modal')" style="position:absolute;top:16px;right:20px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;line-height:1;">&times;</button>
-      <h3 id="tc-title" style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);margin-bottom:6px;">Terms &amp; Conditions</h3>
-      <p style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);margin-bottom:28px;letter-spacing:0.04em;">Effective as of 2025 · CARCO NY</p>
+      <h3 id="tc-title" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);margin-bottom:6px;">Terms &amp; Conditions</h3>
+      <p style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);margin-bottom:28px;letter-spacing:0.04em;">Effective as of 2025 · CARCO NY</p>
 
-      <div style="display:flex;flex-direction:column;gap:20px;font-family:'Inter',sans-serif;font-size:0.875rem;color:var(--muted);line-height:1.75;">
+      <div style="display:flex;flex-direction:column;gap:20px;font-family:'Barlow',sans-serif;font-size:0.875rem;color:var(--muted);line-height:1.75;">
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">1. Service Agreement</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">1. Service Agreement</h4>
           <p>By submitting a request or booking a service with CARCO NY, you agree to these Terms &amp; Conditions. All services are subject to availability and confirmation. CARCO NY reserves the right to accept or decline any request at its discretion.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">2. Service Area</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">2. Service Area</h4>
           <p>CARCO NY provides executive transportation services across New York City, Long Island, and major airports including JFK, LGA, and EWR. Services outside these areas may be accommodated upon request and are subject to additional terms and availability.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">3. Booking &amp; Confirmation</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">3. Booking &amp; Confirmation</h4>
           <p>All bookings must be confirmed by CARCO NY. Clients are responsible for providing accurate service details, including pickup time, location, and itinerary. Unconfirmed requests are not considered scheduled services.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">4. Cancellations &amp; Changes</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">4. Cancellations &amp; Changes</h4>
           <p>Cancellations must be submitted at least 24 hours prior to the scheduled service. Late cancellations or no-shows may result in a cancellation fee or full service charge. Any changes to service details should be communicated in advance and are subject to availability.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">5. Wait Time &amp; Service Adjustments</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">5. Wait Time &amp; Service Adjustments</h4>
           <p>Wait time beyond the included grace period may be billed accordingly. Additional charges may apply for extended service time, additional stops, or last-minute itinerary changes. All adjustments are managed and documented.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">6. Airport Services</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">6. Airport Services</h4>
           <p>Airport services are coordinated based on the information provided at the time of booking. Clients are responsible for submitting accurate flight details and communicating any updates in advance. Meet-and-greet services are provided as arranged and confirmed prior to arrival.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">7. Liability</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">7. Liability</h4>
           <p>CARCO NY is not liable for delays resulting from weather conditions, road closures, traffic incidents, or other circumstances beyond operational control. All services are planned and managed to minimize disruption and maintain schedule integrity.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">8. Privacy</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">8. Privacy</h4>
           <p>All personal information is handled with strict discretion and used solely for the purpose of coordinating services. CARCO NY does not sell or share client information with third parties, except where required by law.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">9. Complimentary Ride Program</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">9. Complimentary Ride Program</h4>
           <p>Participation in the complimentary executive transfer program is subject to review and availability. Submission does not guarantee approval. CARCO NY reserves the right to approve or decline any application at its discretion. Complimentary services are limited to the primary service area and are subject to scheduling requirements.</p>
         </div>
         <div>
-          <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">10. Amendments</h4>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--cream);margin-bottom:6px;">10. Amendments</h4>
           <p>CARCO NY reserves the right to update these Terms &amp; Conditions at any time. Continued use of services following any update constitutes acceptance of the revised terms.</p>
         </div>
       </div>
